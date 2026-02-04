@@ -37,7 +37,7 @@ export default function CheckoutPage() {
                         </li>
                     ))}
                 </ul>
-                <div className="mt-4 border-t pt-2 text-lg font-semibold">
+                <div className="mt-4 pt-2 text-lg font-semibold">
                     Total: ${(total / 100).toFixed(2)}
                 </div>
             </CardContent>

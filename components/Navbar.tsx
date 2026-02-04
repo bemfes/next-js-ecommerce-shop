@@ -1,3 +1,4 @@
+'use client'
 import { useCartStore } from "@/store/storeCart"
 import { ShoppingCartIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
@@ -16,9 +17,9 @@ export const Navbar = () => {
                 <Link href="/checkout" className="hover:text-blue-600">Checkout</Link>
             </div>
             <div className="flex items-center space-x-4">
-                <Link href="/checkout">
-                    <ShoppingCartIcon/>
-                    { cartCount > 0 && <span>{cartCount}</span> }
+                <Link href="/checkout" className="relative">
+                    <ShoppingCartIcon className="h-6 w-6"/>
+                    { cartCount > 0 && <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">{cartCount}</span> }
                 </Link>
             </div>
         </div>

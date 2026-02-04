@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useCartStore } from "@/store/storeCart"
+import { checkoutAction } from "./checkoutAction"
 
 export default function CheckoutPage() {
 
@@ -41,8 +42,8 @@ export default function CheckoutPage() {
                 </div>
             </CardContent>
         </Card>
-        <form className="max-w-md mx-auto mb-6">
-            <Button variant="default" className="w-full">Proceed to Payment</Button>
+        <form action={checkoutAction} className="max-w-md mx-auto mb-6">
+            <Button type="submit" variant="default" className="w-full">Proceed to Payment</Button>
         </form>
         <div className="max-w-md mx-auto"><Button onClick={() => clearCart()} variant="default" className="w-full">Clear Cart</Button></div>
     </div>

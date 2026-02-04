@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { stripe } from "@/lib/stripe";
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -23,6 +24,7 @@ export default async function Home() {
               <Link href="/products">Browse all products</Link>
             </Button>
           </div>
+          <Image src={products.data[0].images[0]} alt="Banner image" width={450} height={450}/>
         </div>
       </section>
     </div>

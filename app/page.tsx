@@ -22,7 +22,7 @@ export default async function Home() {
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Welcome to My Ecommerce</h2>
             <p className="text-neutral-600">Discover the latest products at the best prices</p>
             <Button className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-black text-white" asChild variant="default">
-              <Link className="inline-flex items-center justify-center rounded-full px-6 py-3" href="/products">Browse all products</Link>
+              <Link className="inline-flex items-center justify-center rounded-full px-6 py-3 text-white" href="/products">Browse all products</Link>
             </Button>
           </div>
           <Image src={products.data[2].images[0]} alt="Banner image" width={450} height={450}/>

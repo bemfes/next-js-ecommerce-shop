@@ -43,6 +43,7 @@ export default function CheckoutPage() {
             </CardContent>
         </Card>
         <form action={checkoutAction} className="max-w-md mx-auto mb-6">
+            <input type="hidden" name="items" value={JSON.stringify(items)} />
             <Button type="submit" variant="default" className="w-full">Proceed to Payment</Button>
         </form>
         <div className="max-w-md mx-auto"><Button onClick={() => clearCart()} variant="default" className="w-full">Clear Cart</Button></div>

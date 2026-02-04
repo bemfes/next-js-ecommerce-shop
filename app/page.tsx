@@ -10,6 +10,15 @@ export default async function Home() {
   )
   console.log(products);
   return (
-    <div></div>
+    <div>
+      <section>
+        <div>
+          <div>
+            <h2>Welcome to My Ecommerce</h2>
+            <p>Discover the latest products at the best prices</p>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

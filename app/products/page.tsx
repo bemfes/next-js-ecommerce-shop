@@ -1,3 +1,4 @@
+import { ProductList } from "@/components/ProductList"
 import { stripe } from "@/lib/stripe"
 
 export default async function ProductsPage() {
@@ -8,6 +9,6 @@ export default async function ProductsPage() {
       )
     return <div>
         <h1>All Products</h1>
-        
+        <ProductList products={products.data}></ProductList>
     </div>
 }

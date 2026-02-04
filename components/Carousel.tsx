@@ -22,10 +22,11 @@ export const Carousel = ({products}: Props) => {
     const currentProduct = products[current]
     const price = currentProduct.default_price as Stripe.Price
     return <Card>
-        {currentProduct.images && currentProduct.images[0 && (
+        {currentProduct.images && currentProduct.images[0] && (
             <div>
                 <Image layout="fill" objectFit="cover" alt={currentProduct.name} src={currentProduct.images[0]}/>
             </div>
-        )]}
+        )}
+       
     </Card>
 }

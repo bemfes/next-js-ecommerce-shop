@@ -38,20 +38,20 @@ export const Navbar = () => {
                     <ShoppingCartIcon className="h-6 w-6"/>
                     { cartCount > 0 && <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">{cartCount}</span> }
                 </Link>
-                <Button variant="ghost" onClick={() => setMobileOpen(prev => !prev)}>{mobileOpen ? <XMarkIcon/> : <Bars3Icon/>}</Button>
+                <Button className="md:hidden" variant="ghost" onClick={() => setMobileOpen(prev => !prev)}>{mobileOpen ? <XMarkIcon className="h-6 w-6"/> : <Bars3Icon className="h-6 w-6"/>}</Button>
             </div>
         </div>
        {mobileOpen && (
-        <nav>
-            <ul>
+        <nav className="md:hidden bg-white shadow-md">
+            <ul className="flex flex-col p-4 space-y-2">
                 <li>
-                    <Link href="/">Home</Link>
+                    <Link className="block hover:text-blue-600" href="/">Home</Link>
                 </li>
                 <li>
-                    <Link href="products">Products</Link>
+                    <Link className="block hover:text-blue-600" href="products">Products</Link>
                 </li>
                 <li>
-                    <Link href="/checkout">Checkout</Link>
+                    <Link className="block hover:text-blue-600" href="/checkout">Checkout</Link>
                 </li>
             </ul>
         </nav>

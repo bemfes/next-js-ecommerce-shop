@@ -20,7 +20,7 @@ export const ProductCard = ({product}: Props) => {
                 )}
             <CardHeader className="p-4">
                 <CardTitle className="text-xl font-bold text-gray-800">{product.name}</CardTitle>
-                <CardContent className="p-4 grow flex flex-col justify-between">
+                <CardContent className="px-0 grow flex flex-col justify-between">
                 {price && price.unit_amount && (
                     <p className="text-lg font-semibold text-gray-900">${(price.unit_amount / 100).toFixed(2)}</p>
                 )}

@@ -1,4 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { stripe } from "@/lib/stripe";
+import Link from "next/link";
+
 
 
 export default async function Home() {
@@ -16,6 +19,9 @@ export default async function Home() {
           <div>
             <h2>Welcome to My Ecommerce</h2>
             <p>Discover the latest products at the best prices</p>
+            <Button asChild variant="default">
+              <Link href="/products">Browse all products</Link>
+            </Button>
           </div>
         </div>
       </section>

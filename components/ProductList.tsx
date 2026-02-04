@@ -1,4 +1,5 @@
 import Stripe from "stripe"
+import { ProductCard } from "./ProductCard"
 
 interface Props {
     products: Stripe.Product[]
@@ -11,7 +12,9 @@ export const ProductList = ({products}: Props) => {
         </div>
         <ul>
             {products.map((product) => {
-                return <li key={product.name}></li>
+                return <li key={product.name}>
+                    <ProductCard product={product}></ProductCard>
+                </li>
             })}
         </ul>
     </div>

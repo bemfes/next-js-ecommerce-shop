@@ -5,7 +5,7 @@ export const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
             <Link href="/" className="hover:text-blue-600">My Ecommerce</Link>
 
-            <div className="hidden md:flex space-x-6">
+            <div className="hidden md:flex gap-x-6">
                 <Link href="/" className="hover:text-blue-600">Home</Link>
                 <Link href="/products" className="hover:text-blue-600">Products</Link>
                 <Link href="/checkout" className="hover:text-blue-600">Checkout</Link>

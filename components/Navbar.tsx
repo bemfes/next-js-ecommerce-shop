@@ -38,7 +38,7 @@ export const Navbar = () => {
                     <ShoppingCartIcon className="h-6 w-6"/>
                     { cartCount > 0 && <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-xs text-white">{cartCount}</span> }
                 </Link>
-                <Button>{mobileOpen ? <XMarkIcon/> : <Bars3Icon/>}</Button>
+                <Button variant="ghost" onClick={() => setMobileOpen(prev => !prev)}>{mobileOpen ? <XMarkIcon/> : <Bars3Icon/>}</Button>
             </div>
         </div>
        

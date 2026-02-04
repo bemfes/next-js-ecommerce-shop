@@ -41,6 +41,20 @@ export const Navbar = () => {
                 <Button variant="ghost" onClick={() => setMobileOpen(prev => !prev)}>{mobileOpen ? <XMarkIcon/> : <Bars3Icon/>}</Button>
             </div>
         </div>
-       
+       {mobileOpen && (
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="products">Products</Link>
+                </li>
+                <li>
+                    <Link href="/checkout">Checkout</Link>
+                </li>
+            </ul>
+        </nav>
+       )}
     </nav>
 }

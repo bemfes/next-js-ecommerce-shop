@@ -1,4 +1,4 @@
-'use-client'
+"use client"
 import Stripe from "stripe"
 import { Card } from "./ui/card"
 import { useEffect, useState } from "react"

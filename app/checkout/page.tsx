@@ -39,5 +39,8 @@ export default function CheckoutPage() {
                 </div>
             </CardContent>
         </Card>
+        <form>
+            <Button variant="default">Proceed to Payment</Button>
+        </form>
     </div>
 }

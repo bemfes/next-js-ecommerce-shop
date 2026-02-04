@@ -1,6 +1,6 @@
 "use client"
 import Stripe from "stripe"
-import { Card } from "./ui/card"
+import { Card, CardContent, CardTitle } from "./ui/card"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
@@ -27,6 +27,11 @@ export const Carousel = ({products}: Props) => {
                 <Image layout="fill" objectFit="cover" alt={currentProduct.name} src={currentProduct.images[0]}/>
             </div>
         )}
-       
+       <CardContent>
+        <CardTitle>{currentProduct.name}</CardTitle>
+        {price && price.unit_amount && (
+            <p>${(price.unit_amount / 100).toFixed(2)}</p>
+        )}
+       </CardContent>
     </Card>
 }

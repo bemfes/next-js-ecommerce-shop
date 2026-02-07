@@ -5,6 +5,13 @@ import { Navbar } from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "My Ecommerce Shop",
   description: "Ecommerce shop with various items to buy: from sweatshirts to smartphones",
+  openGraph: {
+    title: "Let's shop with My Ecommerce Shop!",
+    description: "fast shipping, unique items and flawless shopping process only in My Ecommerce Shop!",
+    siteName: "My Ecommerce Shop",
+    locale: "en_US",
+    type: 'website'
+  }
 };
 
 export default function RootLayout({

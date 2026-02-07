@@ -13,7 +13,7 @@ export default async function Home() {
       limit: 5
     }
   )
-  console.log(products);
+  
   return (
     <div>
       <section className="rounded bg-neutral-100 py-8 sm:py-12">

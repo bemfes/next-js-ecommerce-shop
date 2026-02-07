@@ -2,8 +2,13 @@
 
 
 import { useCartStore } from "@/store/storeCart";
+import { Metadata } from "next";
 import Link from "next/link";
 import { useEffect } from "react";
+
+export const metadata: Metadata = {
+  title: "Success shopping!",
+};
 
 export default function SuccessPage() {
   const { clearCart } = useCartStore();

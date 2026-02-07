@@ -1,7 +1,7 @@
 'use client'
 import Stripe from "stripe"
 import { ProductCard } from "./ProductCard"
-import { useState } from "react"
+import { useDeferredValue, useState } from "react"
 
 interface Props {
     products: Stripe.Product[]
@@ -11,8 +11,10 @@ export const ProductList = ({products}: Props) => {
 
     const [searchItem, setSearchItem] = useState<string>('')
 
+    const defferedSearchItem = useDeferredValue(searchItem)
+
     const filteredProducts = products.filter((product) => {
-        const item = searchItem.toLowerCase()
+        const item = defferedSearchItem.toLowerCase()
         const nameMatch = product.name.toLocaleLowerCase().includes(item)
         const descriptionMatch = product.description ? product.description.toLocaleLowerCase().includes(item) : false
         return nameMatch || descriptionMatch

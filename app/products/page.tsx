@@ -1,5 +1,10 @@
 import { ProductList } from "@/components/ProductList"
 import { stripe } from "@/lib/stripe"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "View all products",
+};
 
 export default async function ProductsPage() {
      const products = await stripe.products.list(

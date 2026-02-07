@@ -3,11 +3,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useCartStore } from "@/store/storeCart"
 import { checkoutAction } from "./checkoutAction"
-import { Metadata } from "next"
 
-export const metadata: Metadata = {
-  title: "Checkout",
-};
+
+
 
 export default function CheckoutPage() {
 

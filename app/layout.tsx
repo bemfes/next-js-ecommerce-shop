@@ -11,6 +11,16 @@ export const metadata: Metadata = {
     siteName: "My Ecommerce Shop",
     locale: "en_US",
     type: 'website'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1
+    }
   }
 };
 

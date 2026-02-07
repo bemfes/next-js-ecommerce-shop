@@ -19,7 +19,7 @@ export const ProductList = ({products}: Props) => {
         const descriptionMatch = product.description ? product.description.toLocaleLowerCase().includes(item) : false
         return nameMatch || descriptionMatch
     })
-
+    
     return <div>
         <div className="mb-6 flex justify-center">
             <input 
@@ -29,6 +29,7 @@ export const ProductList = ({products}: Props) => {
             type="text" 
             placeholder="Search products..." />
         </div>
+        {filteredProducts.length === 0 ? <p className="mt-2 text-md text-medium text-black text-center">The item is not found... Please try to find something else</p> :
         <ul className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {filteredProducts.map((product) => {
                 return <li key={product.name}>
@@ -36,5 +37,6 @@ export const ProductList = ({products}: Props) => {
                 </li>
             })}
         </ul>
+        }
     </div>
 }

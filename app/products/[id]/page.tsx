@@ -2,7 +2,12 @@ import { ProductDetail } from "@/components/ProductDetails"
 import { stripe } from "@/lib/stripe"
 import { Metadata } from "next"
 
-export async function generateMetadata({params}: {params: { id: string }}): Promise<Metadata> {
+
+interface Params {
+  id: string
+}
+
+export async function generateMetadata({params}: {params: Params}): Promise<Metadata> {
     const product = await stripe.products.retrieve(params.id, {
         expand: ['default_price']
     })
@@ -18,7 +23,7 @@ export async function generateMetadata({params}: {params: { id: string }}): Prom
     }
 }
 
-export default async function ProductDetailsPage({params}: {params: { id: string }}) {
+export default async function ProductDetailsPage({params}: {params: Params}) {
     const product = await stripe.products.retrieve(params.id, {
         expand: ['default_price']
     })

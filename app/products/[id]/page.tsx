@@ -7,8 +7,13 @@ interface Params {
   id: string
 }
 
-export async function generateMetadata({params}: {params: Params}): Promise<Metadata> {
-    const product = await stripe.products.retrieve(params.id, {
+type ProductPageProps = {
+    params: Promise<Params>
+}
+
+export async function generateMetadata({params}: ProductPageProps): Promise<Metadata> {
+    const {id } = await params
+    const product = await stripe.products.retrieve(id, {
         expand: ['default_price']
     })
     if (!product) {
@@ -23,8 +28,9 @@ export async function generateMetadata({params}: {params: Params}): Promise<Meta
     }
 }
 
-export default async function ProductDetailsPage({params}: {params: Params}) {
-    const product = await stripe.products.retrieve(params.id, {
+export default async function ProductDetailsPage({params}: ProductPageProps) {
+    const {id} = await params
+    const product = await stripe.products.retrieve(id, {
         expand: ['default_price']
     })
 

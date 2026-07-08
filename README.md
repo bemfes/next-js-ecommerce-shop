@@ -4,6 +4,6 @@ This project is an online store with various products. Each product has its own 
 
 This project was built using Next.js, TypeScript, Tailwind CSS, Shadcn and Stripe.
 
-Project is hosted by Vercel - [see the demo here](https://next-js-ecommerce-shop-mu.vercel.app/)
+Project is hosted by Netlify - [see the demo here](https://next-js-shop.netlify.app/)
 
 

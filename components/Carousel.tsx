@@ -27,7 +27,7 @@ export const Carousel = ({products}: Props) => {
         <Card className="relative w-[50%] max-md:w-full mx-auto overflow-hidden rounded-lg shadow-md border-gray-300">
         {currentProduct.images && currentProduct.images[0] && (
             <div className="relative h-80 w-full">
-                <Image className="transition-opacity duration-500 ease-in-out" layout="fill" objectFit="cover" alt={currentProduct.name} src={currentProduct.images[0]}/>
+                <Image className="transition-opacity duration-500 ease-in-out brightness-60" layout="fill" objectFit="cover" alt={currentProduct.name} src={currentProduct.images[0]}/>
             </div>
         )}
        <CardContent className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">

@@ -11,6 +11,12 @@
 
 🌐 [Демо проекта](https://next-js-shop.netlify.app/)
 
+## 📸 Превью
+
+<div>
+    <img src="./preview/nex-js-shop-preview.gif" width="950" alt="Видео-демонстрация приложения">
+</div>
+
 ## 🛠️ Стек
 
 * Next.js
